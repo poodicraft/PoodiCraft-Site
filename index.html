@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PoodiCraft - Minecraft Thumbnails</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font for a slightly "blocky" or gaming feel -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons for contact section -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <style>
+        /* הוספתי גלילה חלקה ברמת ה-HTML כדי שמעבר בין הקישורים יהיה נעים */
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Fredoka', sans-serif;
+            background-color: #0f172a; /* כחול כהה יותר - Slate-900 */
+        }
+        /* Custom class for the specific blue requested */
+        .poodi-blue {
+            color: #3b82f6; /* Tailwind blue-500 equivalent */
+        }
+        /* הוספנו פאדינג לראש כל סקשן כדי שלא יסתתר מאחורי התפריט הקבוע */
+        .page-section {
+            padding-top: 5rem; 
+        }
+        /* רקע לסקשנים חלופיים לצורך הדגמה */
+        #gallery, #contact {
+            background-color: #1e293b; /* Slate-800 */
+        }
+    </style>
+</head>
+<body class="text-white min-h-screen flex flex-col">
+
+    <!-- Navigation Bar - fixed at the top -->
+    <nav class="bg-gray-800 p-4 shadow-xl fixed w-full top-0 z-10">
+        <div class="container mx-auto flex justify-between items-center">
+            
+            <!-- Logo (Left side) -->
+            <div class="text-2xl font-bold poodi-blue">PoodiCraft</div>
+
+            <!-- Menu Items (Right aligned due to RTL) -->
+            <ul class="hidden md:flex space-x-8 space-x-reverse text-lg">
+                <li><a href="#home" class="hover:text-blue-400 transition">בית</a></li>
+                <li><a href="#gallery" class="hover:text-blue-400 transition">גלריה</a></li>
+                <li><a href="#pricing" class="hover:text-blue-400 transition">מחירון</a></li>
+                <li><a href="#contact" class="hover:text-blue-400 transition">צור קשר</a></li>
+            </ul>
+            
+            <!-- Mobile Menu Button (Visible only on small screens) -->
+            <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-700 p-4 mt-2 rounded">
+            <ul class="flex flex-col space-y-2">
+                <li><a href="#home" class="block py-2 hover:text-blue-400">בית</a></li>
+                <li><a href="#gallery" class="block py-2 hover:text-blue-400">גלריה</a></li>
+                <li><a href="#pricing" class="block py-2 hover:text-blue-400">מחירון</a></li>
+                <li><a href="#contact" class="block py-2 hover:text-blue-400">צור קשר</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow w-full">
+
+        <!-- 1. HOME PAGE SECTION -->
+        <section id="home" class="page-section min-h-screen flex items-center justify-center bg-gray-900 text-center">
+            <div class="container mx-auto p-8">
+                <!-- Main Title Requested -->
+                <h1 class="text-7xl md:text-9xl font-bold poodi-blue mb-4 tracking-wide">PoodiCraft</h1>
+                <!-- Subtitle Updated -->
+                <h2 class="text-2xl md:text-4xl text-gray-300">Minecraft videos and thumbnails</h2>
+            </div>
+        </section>
+
+        <!-- 2. GALLERY PAGE SECTION (Placeholder) -->
+        <section id="gallery" class="page-section min-h-screen flex flex-col items-center justify-center bg-gray-800 text-center">
+            <div class="container mx-auto p-8">
+                <h2 class="text-5xl font-extrabold mb-12 border-b-4 border-blue-500 inline-block pb-3">גלריה</h2>
+                <div class="bg-gray-700 p-16 rounded-xl shadow-2xl">
+                    <p class="text-gray-200 text-2xl mb-4">מקום לתמונות ולתיק העבודות שלך.</p>
+                    <p class="text-gray-400 text-lg">כאן תוכל להוסיף רשת של תמונות ממוזערות של מיינקראפט שהכנת. כרגע החלק הזה ריק לחלוטין. נשמח לשמוע מה בדיוק תרצה להוסיף כאן.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. PRICING PAGE SECTION (Detailed) -->
+        <section id="pricing" class="page-section min-h-screen flex flex-col items-center justify-center bg-gray-900 text-center">
+            <div class="container mx-auto p-8">
+                <h2 class="text-5xl font-extrabold mb-16 border-b-4 border-blue-500 inline-block pb-3">מחירון</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+                    
+                    <!-- Pricing Card 1: Thumbnail -->
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-2xl flex flex-col items-center text-center transition hover:bg-gray-700 border-2 border-gray-700 hover:border-blue-500">
+                        <h3 class="text-2xl font-bold mb-4 text-blue-300">עיצוב טאמבנייל</h3>
+                        <p class="text-gray-400 flex-grow mb-6 text-sm">תמונה ממוזערת אחת באיכות גבוהה לסרטון ביוטיוב.</p>
+                        <span class="bg-blue-600 text-white text-2xl font-bold px-6 py-3 rounded-full shadow-lg transform hover:scale-105 transition duration-300">
+                            10₪
+                        </span>
+                    </div>
+
+                    <!-- Pricing Card 2: Short Video Editing -->
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-2xl flex flex-col items-center text-center transition hover:bg-gray-700 border-2 border-gray-700 hover:border-blue-500">
+                        <h3 class="text-2xl font-bold mb-4 text-blue-300">עריכת סרטון קצר (5-10 דקות)</h3>
+                        <p class="text-gray-400 flex-grow mb-6 text-sm">עריכה בסיסית ואיכותית לסרטוני גיימינג קצרים.</p>
+                        <span class="bg-blue-600 text-white text-2xl font-bold px-6 py-3 rounded-full shadow-lg transform hover:scale-105 transition duration-300">
+                            20₪
+                        </span>
+                    </div>
+                    
+                    <!-- Pricing Card 3: Regular Video Editing -->
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-2xl flex flex-col items-center text-center transition hover:bg-gray-700 border-2 border-gray-700 hover:border-blue-500">
+                        <h3 class="text-2xl font-bold mb-4 text-blue-300">עריכת סרטון רגיל (15-30 דקות)</h3>
+                        <p class="text-gray-400 flex-grow mb-6 text-sm">עריכה מתקדמת ומקצועית לסרטונים ארוכים.</p>
+                        <span class="bg-blue-600 text-white text-2xl font-bold px-6 py-3 rounded-full shadow-lg transform hover:scale-105 transition duration-300">
+                            30₪
+                        </span>
+                    </div>
+
+                    <!-- Pricing Card 4: Short/Reel Editing -->
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-2xl flex flex-col items-center text-center transition hover:bg-gray-700 border-2 border-gray-700 hover:border-blue-500">
+                        <h3 class="text-2xl font-bold mb-4 text-blue-300">עריכת סרטון שורט</h3>
+                        <!-- UPDATED DESCRIPTION -->
+                        <p class="text-gray-400 flex-grow mb-6 text-sm">עריכת סרטון שורט קצר ליוטיוב.</p> 
+                        <span class="bg-blue-600 text-white text-2xl font-bold px-6 py-3 rounded-full shadow-lg transform hover:scale-105 transition duration-300">
+                            15₪
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. CONTACT PAGE SECTION (Detailed - NOW WITH EMPTY DISCORD FIELD) -->
+        <section id="contact" class="page-section min-h-screen flex flex-col items-center justify-center bg-gray-800 text-center">
+            <div class="container mx-auto p-8 max-w-2xl">
+                <h2 class="text-5xl font-extrabold mb-12 border-b-4 border-blue-500 inline-block pb-3">צור קשר</h2>
+                <p class="text-gray-300 text-xl mb-12">מוכנים להתחיל בפרויקט? צרו קשר באחת מהדרכים הבאות, ואחזור אליכם בהקדם!</p>
+                
+                <div class="flex flex-col space-y-6">
+                    
+                    <!-- Contact Option 1: Discord (NOW COMPLETELY EMPTY TEXT) -->
+                    <a href="javascript:void(0)" class="flex items-center justify-center p-6 bg-gray-900 rounded-xl shadow-2xl hover:bg-gray-700 transition duration-300 group">
+                        <script>document.write(lucide.createIcons()['message-circle'].toSvg({ class: 'w-8 h-8 text-blue-400 group-hover:text-blue-300 ml-4' }));</script>
+                        <div class="text-right">
+                            <h3 class="text-2xl font-bold text-blue-300">דיסקורד</h3>
+                            <p class="text-gray-400 text-lg"></p> 
+                        </div>
+                    </a>
+
+                    <!-- Contact Option 2: Email (Displaying the address and using mailto) -->
+                    <a href="mailto:poodicraftmc@gmail.com" class="flex items-center justify-center p-6 bg-gray-900 rounded-xl shadow-2xl hover:bg-gray-700 transition duration-300 group">
+                        <script>document.write(lucide.createIcons()['mail'].toSvg({ class: 'w-8 h-8 text-blue-400 group-hover:text-blue-300 ml-4' }));</script>
+                        <div class="text-right">
+                            <h3 class="text-2xl font-bold text-blue-300">דוא"ל</h3>
+                            <p class="text-gray-400 text-lg">poodicraftmc@gmail.com</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-500 p-6 text-center">
+        <!-- FIXED: Removed all design credit text. Only retains copyright. -->
+        <p>&copy; 2026 PoodiCraft. כל הזכויות שמורות.</p>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu Toggle Only (Form submission JS removed) -->
+    <script>
+        // לוגיקה לפתיחה וסגירה של תפריט המובייל
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+        
+        // סגירת התפריט בלחיצה על קישור בתוכו (במובייל)
+        const mobileLinks = document.querySelectorAll('#mobile-menu a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
