@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Poodi's Adventure — משחק הרפתקאות חינמי</title>
+  <link rel="icon" href="logo/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="logo/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="logo/favicon-64.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="logo/favicon-192.png">
+  <link rel="apple-touch-icon" href="logo/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rubik:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="game-page">
+
+  <!-- ============================================================
+       עמוד המשחק Poodi's Adventure.
+       התמונות: projects/project-1.jpg (ראשית), projects/project-1-1.jpg, project-1-2.jpg, project-1-3.jpg (צילומי מסך).
+       קובץ ההורדה: downloads/Poodis-Adventure-Setup-2.3.0.exe — כשמעלים גרסה חדשה, מעדכנים כאן את הקישור (3 מקומות) ואת מספר הגרסה.
+       ============================================================ -->
+
+  <div class="bg">
+    <div class="bg-grid"></div>
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+    <div class="cubes" id="cubes"></div>
+  </div>
+
+  <header class="nav" id="nav">
+    <a href="index.html" class="logo">
+      <img src="logo/logo.jpg" alt="PoodiCraft" class="logo-img">
+      <span class="logo-text">PoodiCraft</span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#features">מה יש במשחק</a>
+      <a href="#gallery">צילומי מסך</a>
+      <a href="#start">איך מתחילים</a>
+      <a href="index.html">הערוץ</a>
+      <a href="#download" class="btn btn-small">הורדה חינם</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="תפריט">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main id="top">
+
+    <!-- ===== Hero: full-bleed cover ===== -->
+    <section class="game-hero">
+      <div class="game-hero-bg">
+        <img src="projects/project-1.jpg" alt="" onerror="this.remove()">
+      </div>
+      <div class="game-hero-inner">
+        <p class="game-kicker reveal">מבית PoodiCraft · משחק הרפתקאות למחשב</p>
+        <h1 class="game-title reveal" style="--d:.1s"><span dir="ltr">Poodi's Adventure</span></h1>
+        <p class="game-sub reveal" style="--d:.2s">
+          משחק מחשב חינמי לגמרי, שנולד מתוך הערוץ. חוקרים עולמות, נלחמים במפלצות, בונים עולם משלכם — ועוד המון.
+        </p>
+        <div class="game-hero-actions reveal" style="--d:.3s">
+          <a href="downloads/Poodis-Adventure-Setup-2.3.0.exe" download class="btn btn-primary btn-xl">
+            <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3a1 1 0 0 1 1 1v9.6l2.3-2.3a1 1 0 1 1 1.4 1.4l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L11 13.6V4a1 1 0 0 1 1-1zM5 18a1 1 0 0 1 1 1v1h12v-1a1 1 0 1 1 2 0v2a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1z"/></svg>
+            הורדה חינם ל-Windows
+          </a>
+          <a href="https://www.youtube.com/@PoodiCraft" target="_blank" rel="noopener" class="btn btn-ghost btn-xl">
+            <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg>
+            לערוץ ביוטיוב
+          </a>
+        </div>
+        <p class="game-hero-meta reveal" style="--d:.4s"><span dir="ltr">v2.3.0</span> · Windows · 90MB · חינם לגמרי</p>
+      </div>
+      <a href="#features" class="scroll-hint" aria-label="גלילה למטה"><span></span></a>
+    </section>
+
+    <!-- ===== Quick facts ===== -->
+    <section class="game-stats reveal">
+      <div class="stat"><span class="stat-value">100%</span><span class="stat-label">חינמי</span></div>
+      <div class="stat"><span class="stat-value">Windows</span><span class="stat-label">פלטפורמה</span></div>
+      <div class="stat"><span class="stat-value" dir="ltr">2.3.0</span><span class="stat-label">גרסה נוכחית</span></div>
+      <div class="stat"><span class="stat-value">90MB</span><span class="stat-label">גודל ההורדה</span></div>
+    </section>
+
+    <!-- ===== Feature spotlights (zig-zag) ===== -->
+    <section class="section" id="features">
+      <div class="section-head reveal">
+        <span class="section-kicker">מה יש במשחק</span>
+        <h2>הרפתקה שלמה, בעולם שלכם</h2>
+      </div>
+
+      <div class="spot reveal">
+        <div class="spot-img">
+          <div class="thumb-frame">
+            <img src="projects/project-1-1.jpg" alt="" onerror="this.parentNode.classList.add('empty')">
+            <span class="thumb-placeholder">הוסיפו תמונה<small>projects/project-1-1.jpg</small></span>
+          </div>
+        </div>
+        <div class="spot-text">
+          <span class="spot-ico">⚔️</span>
+          <h3>הילחמו במפלצות</h3>
+          <p>מפלצות שונות מסתובבות בעולם. נצחו אותן — וצברו מהן נקודות.</p>
+        </div>
+      </div>
+
+      <div class="spot flip reveal">
+        <div class="spot-img">
+          <div class="thumb-frame">
+            <img src="projects/project-1-2.jpg" alt="" onerror="this.parentNode.classList.add('empty')">
+            <span class="thumb-placeholder">הוסיפו תמונה<small>projects/project-1-2.jpg</small></span>
+          </div>
+        </div>
+        <div class="spot-text">
+          <span class="spot-ico">🧱</span>
+          <h3>בנו עולם משלכם</h3>
+          <p>צרו עולם משל עצמכם, בלי גבולות — בדיוק כמו שאתם מדמיינים אותו.</p>
+        </div>
+      </div>
+
+      <div class="spot reveal">
+        <div class="spot-img">
+          <div class="thumb-frame">
+            <img src="projects/project-1.jpg" alt="" onerror="this.parentNode.classList.add('empty')">
+            <span class="thumb-placeholder">הוסיפו תמונה<small>projects/project-1.jpg</small></span>
+          </div>
+        </div>
+        <div class="spot-text">
+          <span class="spot-ico">✨</span>
+          <h3>צאו להרפתקה</h3>
+          <p>חקרו את העולמות השונים והמסתוריים שמחכים לכם במשחק.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Screenshots: one big + small tiles (click to enlarge) ===== -->
+    <section class="section" id="gallery">
+      <div class="section-head reveal">
+        <span class="section-kicker">צילומי מסך</span>
+        <h2>ככה זה נראה</h2>
+      </div>
+      <!-- תמונה בלי קובץ נעלמת לבד. עוד תמונות? שכפלו figure -->
+      <div class="game-gallery">
+        <figure class="gallery-item g-big reveal">
+          <div class="thumb-frame">
+            <img src="projects/project-1.jpg" alt="" onerror="this.closest('figure').remove()">
+          </div>
+        </figure>
+        <figure class="gallery-item reveal" style="--d:.1s">
+          <div class="thumb-frame">
+            <img src="projects/project-1-1.jpg" alt="" onerror="this.closest('figure').remove()">
+          </div>
+        </figure>
+        <figure class="gallery-item reveal" style="--d:.15s">
+          <div class="thumb-frame">
+            <img src="projects/project-1-2.jpg" alt="" onerror="this.closest('figure').remove()">
+          </div>
+        </figure>
+        <figure class="gallery-item reveal" style="--d:.2s">
+          <div class="thumb-frame">
+            <img src="projects/project-1-3.jpg" alt="" onerror="this.closest('figure').remove()">
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== How to start: 3-step timeline ===== -->
+    <section class="section section-alt" id="start">
+      <div class="section-head reveal">
+        <span class="section-kicker">איך מתחילים</span>
+        <h2>שלושה צעדים ואתם בפנים</h2>
+      </div>
+      <ol class="timeline">
+        <li class="tl-step reveal">
+          <span class="tl-num">1</span>
+          <h3>מורידים</h3>
+          <p>לוחצים על כפתור ההורדה ושומרים את קובץ ההתקנה (Windows).</p>
+        </li>
+        <li class="tl-step reveal" style="--d:.1s">
+          <span class="tl-num">2</span>
+          <h3>מתקינים ופותחים</h3>
+          <p>מריצים את הקובץ, פותחים את המשחק ונכנסים לעולם.</p>
+        </li>
+        <li class="tl-step reveal" style="--d:.2s">
+          <span class="tl-num">3</span>
+          <h3>משחקים ונהנים</h3>
+          <p>זהו. ההרפתקה מתחילה.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ===== Download ===== -->
+    <section class="section" id="download">
+      <div class="game-cta reveal">
+        <div class="game-cta-bg"><img src="projects/project-1.jpg" alt="" onerror="this.remove()"></div>
+        <div class="game-cta-inner">
+          <span class="section-kicker">הורדה</span>
+          <h2>מוכנים להרפתקה?</h2>
+          <p>המשחק חינמי לגמרי. מורידים, מתקינים, משחקים.</p>
+          <a href="downloads/Poodis-Adventure-Setup-2.3.0.exe" download class="btn btn-primary btn-xl">
+            <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3a1 1 0 0 1 1 1v9.6l2.3-2.3a1 1 0 1 1 1.4 1.4l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L11 13.6V4a1 1 0 0 1 1-1zM5 18a1 1 0 0 1 1 1v1h12v-1a1 1 0 1 1 2 0v2a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1z"/></svg>
+            הורדה חינם ל-Windows
+          </a>
+          <dl class="game-specs">
+            <dt>קובץ</dt><dd dir="ltr">Poodis-Adventure-Setup-2.3.0.exe</dd>
+            <dt>גרסה</dt><dd dir="ltr">2.3.0</dd>
+            <dt>גודל</dt><dd>90MB</dd>
+            <dt>מחיר</dt><dd>חינם</dd>
+          </dl>
+          <div class="game-cta-links">
+            <button type="button" class="btn btn-ghost" id="discordBtn">
+              <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.6 1.2a18.3 18.3 0 0 0-5.6 0L8.6 3a19.7 19.7 0 0 0-4.9 1.5C.6 9.1-.3 13.6.1 18a19.9 19.9 0 0 0 6 3l1.3-2a12.9 12.9 0 0 1-2-1l.5-.4a14.2 14.2 0 0 0 12.2 0l.5.4a12.9 12.9 0 0 1-2 1l1.3 2a19.8 19.8 0 0 0 6-3c.5-5.1-.8-9.6-3.6-13.6zM8 15.3c-1.2 0-2.2-1.1-2.2-2.4S6.8 10.5 8 10.5s2.2 1.1 2.2 2.4-1 2.4-2.2 2.4zm8 0c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4 2.2 1.1 2.2 2.4-1 2.4-2.2 2.4z"/></svg>
+              שאלות? בדיסקורד
+            </button>
+            <a href="projects/project-1.html" class="btn btn-ghost">עמוד הפרויקט</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <img src="logo/logo.jpg" alt="" class="logo-img small">
+    <span>&copy; <span id="year"></span> PoodiCraft</span>
+    <span class="footer-sep">·</span>
+    <a href="index.html">הערוץ</a>
+    <span class="footer-sep">·</span>
+    <a href="projects.html">פרויקטים</a>
+  </footer>
+
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose" aria-label="סגירה">&times;</button>
+    <img src="" alt="" id="lightboxImg">
+  </div>
+
+  <script src="script.js"></script>
+  <script src="sounds.js"></script>
+</body>
+</html>

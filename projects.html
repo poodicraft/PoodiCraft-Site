@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PoodiCraft — פרויקטים</title>
+  <link rel="icon" href="logo/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="logo/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="logo/favicon-64.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="logo/favicon-192.png">
+  <link rel="apple-touch-icon" href="logo/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rubik:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Animated background -->
+  <div class="bg">
+    <div class="bg-grid"></div>
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+    <div class="cubes" id="cubes"></div>
+  </div>
+
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <a href="index.html" class="logo">
+      <img src="logo/logo.jpg" alt="PoodiCraft" class="logo-img">
+      <span class="logo-text">PoodiCraft</span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">הערוץ</a>
+      <a href="#projectsGrid">פרויקטים</a>
+      <a href="poodis-adventure.html">המשחק</a>
+      <a href="index.html#links">קישורים</a>
+      <a href="portfolio.html" class="btn btn-small">תיק עבודות</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="תפריט">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main id="top">
+
+    <header class="page-head">
+      <span class="section-kicker reveal">פרויקטים</span>
+      <h1 class="reveal" style="--d:.1s">המשחקים והפרויקטים שלי</h1>
+      <p class="page-sub reveal" style="--d:.2s">
+        <!-- כאן משפט קצר על הפרויקטים -->
+        <span class="fill-me">הוסיפו כאן משפט קצר על הפרויקטים</span>
+      </p>
+    </header>
+
+    <!-- Projects grid -->
+    <section class="section section-tight">
+      <!-- כל כרטיס הוא בלוק <a class="project-item">. פשוט ערכו את הטקסטים בתוכו:
+           השם (project-title), המשפט (project-desc), הסוג (project-tag — אפשר למחוק את השורה).
+           התמונה: projects/project-N.jpg. הלחיצה פותחת את projects/project-N.html.
+           עוד פרויקט? שכפלו בלוק שלם ושנו את המספר. -->
+      <div class="projects" id="projectsGrid">
+        <!-- פרויקט 1 : התמונה projects/project-1.jpg, העמוד projects/project-1.html -->
+        <a href="projects/project-1.html" class="project-item reveal" style="--d:0.00s">
+          <div class="thumb-frame">
+            <img src="projects/project-1.jpg" alt="" onerror="if (!this.dataset.png) { this.dataset.png = 1; this.src = 'projects/project-1.png'; } else { this.parentNode.classList.add('empty'); }">
+            <span class="thumb-placeholder">הוסיפו תמונה<small>projects/project-1.jpg</small></span>
+          </div>
+          <div class="project-body">
+            <span class="project-tag">משחק</span>
+            <h3 class="project-title" dir="ltr">Poodi's Adventure</h3>
+            <p class="project-desc">משפט קצר על הפרויקט.</p>
+            <span class="project-link">לעמוד הפרויקט ←</span>
+          </div>
+        </a>
+        <!-- פרויקט 2 : התמונה projects/project-2.jpg, העמוד projects/project-2.html -->
+        <a href="projects/project-2.html" class="project-item reveal" style="--d:0.05s">
+          <div class="thumb-frame">
+            <img src="projects/project-2.jpg" alt="" onerror="if (!this.dataset.png) { this.dataset.png = 1; this.src = 'projects/project-2.png'; } else { this.parentNode.classList.add('empty'); }">
+            <span class="thumb-placeholder">הוסיפו תמונה<small>projects/project-2.jpg</small></span>
+          </div>
+          <div class="project-body">
+            <span class="project-tag">סוג — למשל משחק / מוד / סרטון</span>
+            <h3 class="project-title">שם הפרויקט 2</h3>
+            <p class="project-desc">משפט קצר על הפרויקט.</p>
+            <span class="project-link">לעמוד הפרויקט ←</span>
+          </div>
+        </a>
+        <!-- פרויקט 3 : התמונה projects/project-3.jpg, העמוד projects/project-3.html -->
+        <a href="projects/project-3.html" class="project-item reveal" style="--d:0.10s">
+          <div class="thumb-frame">
+            <img src="projects/project-3.jpg" alt="" onerror="if (!this.dataset.png) { this.dataset.png = 1; this.src = 'projects/project-3.png'; } else { this.parentNode.classList.add('empty'); }">
+            <span class="thumb-placeholder">הוסיפו תמונה<small>projects/project-3.jpg</small></span>
+          </div>
+          <div class="project-body">
+            <span class="project-tag">סוג — למשל משחק / מוד / סרטון</span>
+            <h3 class="project-title">שם הפרויקט 3</h3>
+            <p class="project-desc">משפט קצר על הפרויקט.</p>
+            <span class="project-link">לעמוד הפרויקט ←</span>
+          </div>
+        </a>
+        <!-- פרויקט 4 : התמונה projects/project-4.jpg, העמוד projects/project-4.html -->
+        <a href="projects/project-4.html" class="project-item reveal" style="--d:0.15s">
+          <div class="thumb-frame">
+            <img src="projects/project-4.jpg" alt="" onerror="if (!this.dataset.png) { this.dataset.png = 1; this.src = 'projects/project-4.png'; } else { this.parentNode.classList.add('empty'); }">
+            <span class="thumb-placeholder">הוסיפו תמונה<small>projects/project-4.jpg</small></span>
+          </div>
+          <div class="project-body">
+            <span class="project-tag">סוג — למשל משחק / מוד / סרטון</span>
+            <h3 class="project-title">שם הפרויקט 4</h3>
+            <p class="project-desc">משפט קצר על הפרויקט.</p>
+            <span class="project-link">לעמוד הפרויקט ←</span>
+          </div>
+        </a>
+        <!-- פרויקט 5 : התמונה projects/project-5.jpg, העמוד projects/project-5.html -->
+        <a href="projects/project-5.html" class="project-item reveal" style="--d:0.20s">
+          <div class="thumb-frame">
+            <img src="projects/project-5.jpg" alt="" onerror="if (!this.dataset.png) { this.dataset.png = 1; this.src = 'projects/project-5.png'; } else { this.parentNode.classList.add('empty'); }">
+            <span class="thumb-placeholder">הוסיפו תמונה<small>projects/project-5.jpg</small></span>
+          </div>
+          <div class="project-body">
+            <span class="project-tag">סוג — למשל משחק / מוד / סרטון</span>
+            <h3 class="project-title">שם הפרויקט 5</h3>
+            <p class="project-desc">משפט קצר על הפרויקט.</p>
+            <span class="project-link">לעמוד הפרויקט ←</span>
+          </div>
+        </a>
+        <!-- פרויקט 6 : התמונה projects/project-6.jpg, העמוד projects/project-6.html -->
+        <a href="projects/project-6.html" class="project-item reveal" style="--d:0.25s">
+          <div class="thumb-frame">
+            <img src="projects/project-6.jpg" alt="" onerror="if (!this.dataset.png) { this.dataset.png = 1; this.src = 'projects/project-6.png'; } else { this.parentNode.classList.add('empty'); }">
+            <span class="thumb-placeholder">הוסיפו תמונה<small>projects/project-6.jpg</small></span>
+          </div>
+          <div class="project-body">
+            <span class="project-tag">סוג — למשל משחק / מוד / סרטון</span>
+            <h3 class="project-title">שם הפרויקט 6</h3>
+            <p class="project-desc">משפט קצר על הפרויקט.</p>
+            <span class="project-link">לעמוד הפרויקט ←</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Back to the channel -->
+    <section class="section">
+      <div class="contact reveal">
+        <span class="section-kicker">הערוץ</span>
+        <h2>רוצים לראות עוד?</h2>
+        <p>כל הסרטונים נמצאים בערוץ היוטיוב.</p>
+        <div class="contact-links">
+          <a href="https://www.youtube.com/@PoodiCraft" target="_blank" rel="noopener" class="btn btn-primary">
+            <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg>
+            <span dir="ltr">@PoodiCraft</span>
+          </a>
+          <button type="button" class="btn btn-ghost" id="discordBtn">
+            <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.6 1.2a18.3 18.3 0 0 0-5.6 0L8.6 3a19.7 19.7 0 0 0-4.9 1.5C.6 9.1-.3 13.6.1 18a19.9 19.9 0 0 0 6 3l1.3-2a12.9 12.9 0 0 1-2-1l.5-.4a14.2 14.2 0 0 0 12.2 0l.5.4a12.9 12.9 0 0 1-2 1l1.3 2a19.8 19.8 0 0 0 6-3c.5-5.1-.8-9.6-3.6-13.6zM8 15.3c-1.2 0-2.2-1.1-2.2-2.4S6.8 10.5 8 10.5s2.2 1.1 2.2 2.4-1 2.4-2.2 2.4zm8 0c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4 2.2 1.1 2.2 2.4-1 2.4-2.2 2.4z"/></svg>
+            <span dir="ltr">PoodiCraft</span>
+          </button>
+          <a href="index.html" class="btn btn-ghost">לעמוד הבית</a>
+          <a href="portfolio.html" class="btn btn-ghost">תיק עבודות</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <img src="logo/logo.jpg" alt="" class="logo-img small">
+    <span>&copy; <span id="year"></span> PoodiCraft</span>
+    <span class="footer-sep">·</span>
+    <a href="index.html">הערוץ</a>
+    <span class="footer-sep">·</span>
+    <a href="portfolio.html">תיק עבודות</a>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="sounds.js"></script>
+</body>
+</html>

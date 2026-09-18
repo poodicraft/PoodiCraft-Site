@@ -1,0 +1,45 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // בעל האתר: רק החשבון הזה (מאומת) יכול למחוק המלצות של אחרים
+    function isOwnerAccount() {
+      return request.auth != null
+        && request.auth.token.email_verified == true
+        && request.auth.token.email.lower() == 'poodicraftmc@gmail.com';
+    }
+
+    function validReview(d) {
+      return d.text is string && d.text.size() >= 3 && d.text.size() <= 600
+        && d.stars is int && d.stars >= 1 && d.stars <= 5
+        && d.name is string && d.name.size() >= 1 && d.name.size() <= 60
+        // את התג "בעל האתר" רק בעל האתר יכול לסמן
+        && (d.get('ownerPost', false) == false || isOwnerAccount());
+    }
+
+    match /reviews/{reviewId} {
+      // כולם יכולים לקרוא
+      allow read: if true;
+
+      // רק משתמש מחובר, ורק בשם עצמו
+      allow create: if request.auth != null
+        && request.resource.data.uid == request.auth.uid
+        && validReview(request.resource.data);
+
+      // עריכה: רק מי שכתב, ובלי לשנות למי זה שייך
+      allow update: if request.auth != null
+        && resource.data.uid == request.auth.uid
+        && request.resource.data.uid == resource.data.uid
+        && validReview(request.resource.data);
+
+      // מחיקה: מי שכתב, או בעל האתר
+      allow delete: if request.auth != null
+        && (resource.data.uid == request.auth.uid || isOwnerAccount());
+    }
+
+    // כל השאר חסום
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

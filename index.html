@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PoodiCraft — הערוץ</title>
+  <link rel="icon" href="logo/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="logo/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="logo/favicon-64.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="logo/favicon-192.png">
+  <link rel="apple-touch-icon" href="logo/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rubik:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Animated background -->
+  <div class="bg">
+    <div class="bg-grid"></div>
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+    <div class="cubes" id="cubes"></div>
+  </div>
+
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <a href="#top" class="logo">
+      <img src="logo/logo.jpg" alt="PoodiCraft" class="logo-img">
+      <span class="logo-text">PoodiCraft</span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#videos">סרטונים</a>
+      <a href="#about">אודות</a>
+      <a href="#links">קישורים</a>
+      <a href="poodis-adventure.html">המשחק</a>
+      <a href="projects.html">פרויקטים</a>
+      <a href="portfolio.html" class="btn btn-small">תיק עבודות</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="תפריט">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main id="top">
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-content">
+        <p class="hero-tag reveal">ערוץ יוטיוב</p>
+        <h1 class="hero-title">
+          <span class="line"><span class="word accent" dir="ltr">PoodiCraft</span></span>
+          <!-- שורת כותרת נוספת (מחקו את ההערה ומלאו):
+          <span class="line"><span class="word">כאן הכותרת שלכם</span></span>
+          -->
+        </h1>
+        <p class="hero-sub reveal" style="--d:.6s">
+          <!-- כאן משפט קצר על הערוץ -->
+          <span class="fill-me">ערוץ מיינקראפט • יצירת טאמבניילים לסרטונים</span>
+        </p>
+        <div class="hero-actions reveal" style="--d:.8s">
+          <a href="https://www.youtube.com/@PoodiCraft" target="_blank" rel="noopener" class="btn btn-primary">
+            <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg>
+            לערוץ ביוטיוב
+          </a>
+          <a href="portfolio.html" class="btn btn-ghost">לתיק העבודות</a>
+        </div>
+      </div>
+
+      <div class="hero-visual hero-visual-logo reveal" style="--d:.5s">
+        <div class="hero-logo-wrap">
+          <div class="hero-logo-ring"></div>
+          <div class="hero-logo-ring ring-2"></div>
+          <img src="logo/logo.jpg" alt="PoodiCraft" class="hero-logo">
+        </div>
+      </div>
+
+      <a href="#videos" class="scroll-hint" aria-label="גלילה למטה">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- Videos -->
+    <section class="section" id="videos">
+      <div class="section-head reveal">
+        <span class="section-kicker">סרטונים</span>
+        <h2>הסרטונים שלי</h2>
+      </div>
+
+      <!-- כדי להוסיף סרטונים: ערכו את הרשימה VIDEOS בתחילת script.js -->
+      <div class="videos" id="videosGrid"></div>
+
+      <div class="section-cta reveal">
+        <a href="https://www.youtube.com/@PoodiCraft" target="_blank" rel="noopener" class="btn btn-ghost">
+          <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg>
+          לכל הסרטונים בערוץ
+        </a>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section section-alt" id="about">
+      <div class="about">
+        <div class="about-text reveal">
+          <span class="section-kicker">אודות</span>
+          <h2>על הערוץ</h2>
+          <div class="about-body">
+            <p>היי👋</p>
+            <p>אני פודיקראפט</p>
+            <p>אני עושה סרטונים ביוטיוב כבר כמעט שנתיים.</p>
+            <p>בשנה האחרונה התחלתי להתעניין ביצירת טאמבניילים.</p>
+            <p>החלטתי להתחיל לעזור ליוצרי תוכן אחרים שלא יודעים להכין טאמבניילים, ולהכין להם טאמבניילים איכותיים במחיר מאוד זול!</p>
+            <p>אני מזמין אותכם לכתוב לי בדיסקורד או ביוטיוב אם אתם מעוניינים, ואענה לכם בהקדם האפשרי.</p>
+            <p>מזכיר, שעכשיו זה עוד ההתחלה ואני מציע מחיר ממש טוב של החל מ־10₪ בלבד לטאמבנייל, אז מהרו להיות הראשונים ולהרוויח הנחה מטורפת!</p>
+          </div>
+        </div>
+        <div class="about-visual reveal" style="--d:.2s">
+          <div class="channel-card-wrap">
+            <div class="channel-card" id="channelCard">
+              <div class="channel-banner">
+                <span class="px px-1"></span><span class="px px-2"></span><span class="px px-3"></span><span class="px px-4"></span>
+              </div>
+              <img src="logo/logo.jpg" alt="PoodiCraft" class="channel-avatar">
+              <div class="channel-body">
+                <span class="channel-name">PoodiCraft</span>
+                <span class="channel-handle" dir="ltr">@PoodiCraft</span>
+                <a href="https://www.youtube.com/@PoodiCraft" target="_blank" rel="noopener" class="btn btn-primary channel-sub">
+                  <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg>
+                  הירשמו לערוץ
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio teaser -->
+    <section class="section" id="portfolio">
+      <a href="portfolio.html" class="portfolio-card reveal">
+        <div class="portfolio-card-text">
+          <span class="section-kicker">תיק עבודות</span>
+          <h2>טאמבניילים למיינקראפט</h2>
+          <p>טאמבניילים בהתאמה אישית לערוצי יוטיוב של מיינקראפט — ניתן להזמין.</p>
+          <span class="btn btn-primary">לתיק העבודות</span>
+        </div>
+        <div class="portfolio-card-visual">
+          <div class="mini-card mini-1"><div class="thumb-frame"><img src="thumbnails/thumb-1.jpg" alt="" onerror="this.parentNode.classList.add('empty')"></div></div>
+          <div class="mini-card mini-2"><div class="thumb-frame"><img src="thumbnails/thumb-2.jpg" alt="" onerror="this.parentNode.classList.add('empty')"></div></div>
+          <div class="mini-card mini-3"><div class="thumb-frame"><img src="thumbnails/thumb-3.jpg" alt="" onerror="this.parentNode.classList.add('empty')"></div></div>
+        </div>
+      </a>
+    </section>
+
+
+    <!-- Game banner -->
+    <section class="section section-tight" id="game">
+      <a href="poodis-adventure.html" class="game-banner reveal">
+        <div class="game-banner-bg"><img src="projects/project-1.jpg" alt="" onerror="this.remove()"></div>
+        <div class="game-banner-text">
+          <span class="section-kicker">המשחק שלי</span>
+          <h2 dir="ltr">Poodi's Adventure</h2>
+          <p>משחק הרפתקאות חינמי למחשב — חוקרים, נלחמים במפלצות, בונים עולם משלכם.</p>
+          <span class="btn btn-primary">לעמוד המשחק</span>
+        </div>
+      </a>
+    </section>
+
+    <!-- Projects teaser -->
+    <section class="section section-tight" id="projects">
+      <a href="projects.html" class="portfolio-card projects-card reveal">
+        <div class="portfolio-card-text">
+          <span class="section-kicker">פרויקטים</span>
+          <h2>משחקים ופרויקטים</h2>
+          <p>
+            <!-- כאן משפט קצר על הפרויקטים -->
+            כל המשחקים והדברים שיצרתי לערוץ, במקום אחד.
+          </p>
+          <span class="btn btn-primary">לכל הפרויקטים</span>
+        </div>
+        <div class="portfolio-card-visual">
+          <!-- התמונות נלקחות מהתיקייה projects/ — בלי קובץ מוצג אייקון -->
+          <div class="mini-card mini-1"><div class="thumb-frame"><img src="projects/project-1.jpg" alt="" onerror="this.parentNode.classList.add('empty')"></div></div>
+          <div class="mini-card mini-2"><div class="thumb-frame"><img src="projects/project-2.jpg" alt="" onerror="this.parentNode.classList.add('empty')"></div></div>
+          <div class="mini-card mini-3"><div class="thumb-frame"><img src="projects/project-3.jpg" alt="" onerror="this.parentNode.classList.add('empty')"></div></div>
+        </div>
+      </a>
+    </section>
+
+    <!-- Links -->
+    <section class="section" id="links">
+      <div class="contact reveal">
+        <span class="section-kicker">קישורים</span>
+        <h2>איפה מוצאים אותי</h2>
+        <p>
+          <!-- כאן משפט קצר (אופציונלי) -->
+        </p>
+        <div class="contact-links">
+          <!-- הוסיפו כאן עוד כפתורים לרשתות נוספות -->
+          <a href="https://www.youtube.com/@PoodiCraft" target="_blank" rel="noopener" class="btn btn-primary">
+            <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg>
+            <span dir="ltr">@PoodiCraft</span>
+          </a>
+          <button type="button" class="btn btn-ghost" id="discordBtn">
+            <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.6 1.2a18.3 18.3 0 0 0-5.6 0L8.6 3a19.7 19.7 0 0 0-4.9 1.5C.6 9.1-.3 13.6.1 18a19.9 19.9 0 0 0 6 3l1.3-2a12.9 12.9 0 0 1-2-1l.5-.4a14.2 14.2 0 0 0 12.2 0l.5.4a12.9 12.9 0 0 1-2 1l1.3 2a19.8 19.8 0 0 0 6-3c.5-5.1-.8-9.6-3.6-13.6zM8 15.3c-1.2 0-2.2-1.1-2.2-2.4S6.8 10.5 8 10.5s2.2 1.1 2.2 2.4-1 2.4-2.2 2.4zm8 0c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4 2.2 1.1 2.2 2.4-1 2.4-2.2 2.4z"/></svg>
+            <span dir="ltr">PoodiCraft</span>
+          </button>
+          <a href="portfolio.html" class="btn btn-ghost">תיק עבודות</a>
+          <a href="projects.html" class="btn btn-ghost">פרויקטים</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <img src="logo/logo.jpg" alt="" class="logo-img small">
+    <span>&copy; <span id="year"></span> PoodiCraft</span>
+    <span class="footer-sep">·</span>
+    <a href="portfolio.html">תיק עבודות</a>
+    <span class="footer-sep">·</span>
+    <a href="projects.html">פרויקטים</a>
+    <span class="footer-sep">·</span>
+    <a href="poodis-adventure.html">Poodi's Adventure</a>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="sounds.js"></script>
+</body>
+</html>
